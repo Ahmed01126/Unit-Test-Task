@@ -1,0 +1,6 @@
+example\store\Store.class
+example\store\StoreImpl.class
+example\account\AccountManager.class
+example\account\AccountManagerImpl.class
+example\store\Product.class
+example\account\Customer.class
