@@ -18,6 +18,20 @@ All tests passed successfully ✅
 
 ![image](https://github.com/user-attachments/assets/fe6e1e1c-163c-4dcb-b482-844997d0917a)
 
+## 📊 Code Coverage
+
+- **Classes covered**: `AccountManagerImpl`, `Customer`
+- **Tests**: 8 unit tests
+- **Coverage Summary**:
+  - **Lines covered**: 100%
+  - **Branches covered**: 100%
+  - **Methods covered**: 100%
+    
+ ![image](https://github.com/user-attachments/assets/0313186e-8f69-4c32-a72c-2240871e1199)
+
+
+> This was measured using IntelliJ's built-in test coverage tool. You can generate a full report using [JaCoCo](https://www.jacoco.org/jacoco/) or [Cobertura](https://cobertura.github.io/cobertura/).
+
 
 ## Structure
 
