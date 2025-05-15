@@ -9,14 +9,6 @@ public class Customer {
 //    private int maxCredit = 0;
     private boolean vip;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getBalance() {
         return balance;
     }

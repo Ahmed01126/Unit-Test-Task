@@ -5,14 +5,6 @@ public class Product {
     private int price;
     private int quantity;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getPrice() {
         return price;
     }

@@ -12,28 +12,23 @@ public class AccountManagerTest {
     @Test
     public void givenCustomer_whenDeposit_thenBalanceUpdated() {
         accountManager.deposit(customer, 1000);
-        Assertions.assertEquals(1000, customer.getBalance());
-//        assertThat(customer.getBalance()).isEqualTo(1000);
+        assertThat(customer.getBalance()).isEqualTo(1000);
     }
 
     @Test
     public void givenCustomer_whenDepositWithNegativeAmount_thenBalanceNotUpdated() {
-        Assertions.assertThrows(IllegalArgumentException.class,
-                () -> accountManager.deposit(customer, -1000));
         Assertions.assertEquals(0, customer.getBalance());
-
-//        assertThatThrownBy(() -> accountManager.deposit(customer, -1000))
-//                .isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> accountManager.deposit(customer, -1000))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("amount must be positive");
     }
 
     @Test
-    public void givenCustomer_whenWithdraw_thenBalanceUpdated() {
+    public void givenCustomer_whenWithdrawWithSufficientBalance_thenBalanceUpdated() {
         customer.setBalance(1000);
         String result = accountManager.withdraw(customer, 500);
         Assertions.assertEquals("success", result);
-        Assertions.assertEquals(500, customer.getBalance());
-//        assertThat(result).isEqualTo("success");
-//        assertThat(customer.getBalance()).isEqualTo(500);
+        assertThat(customer.getBalance()).isEqualTo(500);
     }
 
     @Test
